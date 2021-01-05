@@ -1,4 +1,6 @@
-# ideservd verion 0.32a
+# ideservd 0.32a
+
+In order to compile ideservd Makefile.macos was modified to include libftdi libs and headers
 
 ## Installation on MacOSX
   
