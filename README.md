@@ -1,5 +1,6 @@
 # ideservd 0.32a
 
+This Temporary Repository for keeping all build files for ideservd for MacOSX.
 In order to compile ideservd Makefile.macos was modified to include libftdi libs and headers
 
 ## Installation on MacOSX
