@@ -44,3 +44,7 @@ Run ideservd again:
   Served device: A4YR7X3Z (IDE64 USB DEVICE)
 ```  
 Now its working correctly.  
+
+## Compiled version:
+
+[ideservd](src/ideservd)
