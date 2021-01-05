@@ -1,0 +1,66 @@
+OBJ = ideservd.o crc8.o usb.o vice.o rs232.o x1541.o pc64.o parport.o \
+ eth.o path.o partition.o my_getopt.o avl.o shorten.o compat.o normal.o \
+ message.o wchar.o log.o arguments.o timeout.o buffer.o
+LDLIBS =
+LANG = C
+CFLAGS = -Wall -Wextra -pipe -O2 -fomit-frame-pointer -Werror=missing-prototypes
+LDFLAGS = -g
+CFLAGS += $(LDFLAGS)
+TARGET = ideservd
+PREFIX = $(DESTDIR)/usr/local
+BINDIR = $(PREFIX)/bin
+
+LDLIBS += `pkg-config --libs libftdi1 2>/dev/null || pkg-config --libs libftdi 2>/dev/null || libftdi1-config --libs 2>/dev/null || libftdi-config --libs 2>/dev/null`
+CFLAGS += `pkg-config --cflags libftdi1 2>/dev/null || pkg-config --cflags libftdi 2>/dev/null || libftdi1-config --cflags 2>/dev/null || libftdi-config --cflags 2>/dev/null`
+
+.SILENT:
+
+$(TARGET): $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) $(LDLIBS) -o $@
+
+arguments.o: arguments.c arguments.h nameconversion.h getopt.h \
+ my_getopt.h message.h
+avl.o: avl.c avl.h
+buffer.o: buffer.c buffer.h partition.h arguments.h nameconversion.h \
+ path.h
+compat.o: compat.c compat.h driver.h path.h nameconversion.h crc8.h \
+ partition.h log.h arguments.h buffer.h ideservd.h
+crc8.o: crc8.c crc8.h
+eth.o: eth.c eth.h crc8.h log.h driver.h
+ideservd.o: ideservd.c ideservd.h path.h nameconversion.h partition.h \
+ driver.h arguments.h usb.h eth.h vice.h rs232.h x1541.h pc64.h crc8.h \
+ compat.h normal.h log.h message.h buffer.h
+log.o: log.c log.h
+message.o: message.c message.h
+my_getopt.o: my_getopt.c my_getopt.h message.h
+normal.o: normal.c normal.h driver.h path.h nameconversion.h crc8.h \
+ partition.h log.h arguments.h buffer.h ideservd.h
+parport.o: parport.c parport.h log.h
+partition.o: partition.c partition.h
+path.o: path.c path.h nameconversion.h partition.h wchar.h avl.h \
+ shorten.h log.h ideservd.h
+pc64.o: pc64.c pc64.h crc8.h log.h driver.h parport.h timeout.h
+rs232.o: rs232.c rs232.h crc8.h log.h driver.h
+shorten.o: shorten.c shorten.h
+timeout.o: timeout.c timeout.h
+usb.o: usb.c usb.h crc8.h log.h driver.h timeout.h
+vice.o: vice.c vice.h eth.h crc8.h log.h driver.h
+wchar.o: wchar.c wchar.h
+x1541.o: x1541.c x1541.h crc8.h log.h driver.h parport.h timeout.h
+
+.PHONY: all clean distclean install install-strip uninstall
+
+clean:
+	-rm -f $(OBJ)
+
+distclean: clean
+	-rm -f $(TARGET)
+
+install: $(TARGET)
+	install -D $(TARGET) $(BINDIR)/$(TARGET)
+
+install-strip: $(TARGET)
+	install -D -s $(TARGET) $(BINDIR)/$(TARGET)
+
+uninstall:
+	-rm $(BINDIR)/$(TARGET)

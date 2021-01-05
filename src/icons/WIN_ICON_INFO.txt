@@ -1,0 +1,37 @@
+Win XP - klasicky vzhled
+Rozliseni ikony v system taskbaru je dano nastavenim v:
+desktop -> vlastnosti -> Vzhled -> Upresnit -> Zahlavi aktivniho okna -> Velikost
+Work PC 1280x1024/32bit:
+Min. 15
+pri  18 ...... ikona 16x16
+
+Doma PC:
+Min. 21 tj. velikost ikon 18x18
+pri  22 ...... ikona 20x20
+pri  23 ...... ikona 20x20
+pri  24 ...... ikona 22x22
+
+Win XP doporucuje ikony v techto rozlisenich:
+
+48 × 48 pixels
+32 × 32 pixels
+16 × 16 pixels
+
+kazdou:
+
+4-bit	(16 barev)
+8-bit	(256 barev)
+24-bit	(16 777 216 barev)
+
+viz: http://msdn.microsoft.com/en-us/library/ms997636.aspx
+
+Na spojivani ikon do jednoho .ico souboru pouzivaji sw:
+Gif Movie Gear (GMG)
+30 day trial:
+http://www.gamani.com/gmgdown.htm 
+
+Funguje i Gimp, 2.4.5, jednotlive ikony jsou ve vrstvach.
+
+Pro inspiraci
+http://thenewdrop.com/?p=888
+

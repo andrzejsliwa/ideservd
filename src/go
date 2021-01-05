@@ -1,0 +1,12 @@
+#!/bin/sh
+killall ideservd 2>/dev/null
+
+#export LANG=C.UTF-8
+mkdir -p /tmp/pclink; chmod 1777 /tmp/pclink
+#while true; do
+./ideservd -m vice --root=/tmp/pclink $@
+#./ideservd --root=/tmp/pclink $@
+#./ideservd --root=/home/soci/work/ideserv/src/export --user nobody --group nogroup $@
+#sleep 1
+#done
+# --log /dev/tty5 $@

@@ -1,0 +1,181 @@
+2020-12-19  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* USB protocol fix for faster IDEDOS r1089 operation
+
+2020-12-18  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Packets merging for USB and VICE
+	* Improve USB response latency
+	* Old messages get removed now on log window full
+
+2020-12-15  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* FreeBSD is shown in directory header now
+	* Path is retained when USB device temporarily gone
+
+2020-12-08  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Directory lists are not limited to 64 KiB now
+
+2020-12-06  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Measure operation durations as well in log
+
+2020-11-30  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Tray icon uses internal icon not the ico file
+
+2020-11-29  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Compiles with both libftdi/libftdi1 now
+
+2020-05-03  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Log displayed in window now
+	* -b option now hides window on start
+
+2019-11-02  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Cut off long directory lists
+
+2019-09-29  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix various filename conversion problems
+	* Improve USB performance
+
+2019-09-27  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Add dot style extension creation (-F)
+	* Improve Unicode support
+	* Reduce system load
+
+2016-08-06  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Improve filename shortening
+	* FreeBSD support
+
+2016-04-18  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix linking on WIN32
+
+2016-04-17  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Verbose mode
+	* Change nice to 0
+	* Makefile fixes
+	* Improve messages
+
+2015-08-10  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix mode only open
+
+2014-09-29  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Better USB device search
+
+2014-09-26  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Work around wrong usb timeouts
+	* Fix win32 logfile argument crash
+
+2014-08-31  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Long name "shortening".
+
+2014-08-23  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Filter out duplicate names
+
+2013-02-21  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* OSX compile
+
+2012-08-07  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix path resolv crash if the path is non existing
+	* Use after free bug in dir handling
+
+2012-07-08  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Changed default root on win32
+	* Does not close on win32 when usb cable is unplugged
+
+2012-06-23  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* -r and --root for win32
+
+2012-03-04  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Path handling changes also for compat mode
+
+2012-02-18  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Path handling changes
+
+2012-02-15  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Count write bytes
+
+2012-02-11  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix null filetype handling
+
+2011-01-08  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fork child on unix
+
+2010-05-24  Ambricka <petter@gavlehandel.se>
+
+	* Missing break
+
+2009-10-03  Josef Soucek <josef@ide64.org>
+
+	* Compile fixes for WIN32
+
+2008-03-15  Josef Soucek <josef@ide64.org>
+	    Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* FTDI USB server support
+
+2006-11-10  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* EPCLink server support
+	
+2006-09-15  Silver Dream <silverdr@inet.com.pl>
+
+	* Serial fixes for OSX
+
+2006-08-02  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Now it compiles on SunOS
+
+2006-02-01  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Added --lptport, and --allprg options
+
+2005-12-17  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Commandline options for win32
+
+2005-09-18  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* High priority for default
+        * Dynamic polling, 16ms max (x, pc64 cable)
+
+2005-09-13  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* No more division by zero on too fast transfers
+
+2005-08-28  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* No filetypes in dirname
+	* Big path resolver update
+
+2005-08-27  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Fix for blockread
+
+2005-08-21  Kajtar Zsolt  <soci@c64.rulez.org>
+
+	* Serial communication huge fix ;)
+

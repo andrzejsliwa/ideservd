@@ -1,0 +1,40 @@
+#include <windows.h>
+#include "resource.h"
+
+IDI_ICON ICON "pclink.ico"
+
+// x-position,y-position,width,height
+IDD_MAIN DIALOG FIXED 50, 50, 170, 105
+STYLE DS_MODALFRAME | WS_CAPTION | WS_THICKFRAME | WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX
+CAPTION "PCLink ideservd 0.32a 20201219"
+FONT 8, "MS Sans Serif"
+{
+    PUSHBUTTON      "&Close ideservd", IDC_EXIT, 105, 85, 60, 15, WS_TABSTOP
+    EDITTEXT        IDC_LOG, 0, 0, 170, 78, ES_MULTILINE | ES_LEFT | WS_VSCROLL | WS_VSCROLL | WS_TABSTOP | ES_AUTOHSCROLL
+    PUSHBUTTON      "&Hide the PCLink Window", IDC_HIDE, 5, 85, 95, 15, WS_TABSTOP
+}
+
+
+1 VERSIONINFO
+FILEVERSION     0,30,2,0
+PRODUCTVERSION  0,30,2,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "Singular Crew, The IDE64 project"
+      VALUE "FileDescription", "IDEDOS 0.9x PCLink file server"
+      VALUE "FileVersion", "0.32a"
+      VALUE "InternalName", "ideservd"
+      VALUE "LegalCopyright", "2020 (C) Kajtar Zsolt, Josef Soucek"
+      VALUE "OriginalFilename", "ideservd.exe"
+      VALUE "ProductName", "IDEservd"
+      VALUE "ProductVersion", "0.32a"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END

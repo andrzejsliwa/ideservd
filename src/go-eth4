@@ -1,0 +1,12 @@
+#!/bin/sh
+killall ideservd 2>/dev/null
+
+C64_IP=10.2.22.64
+C64_NET=00
+
+mkdir -p /tmp/pclink; chmod 1777 /tmp/pclink
+
+arp -s $C64_IP 49:44:45:36:34:$C64_NET
+#iptables -I INPUT -p UDP --dport 640$C64_NET -j ACCEPT
+exec ./ideservd -m eth --root=/tmp/pclink --user nobody --group nogroup --ipaddress $C64_IP --network 0x$C64_NET $@
+# --log /dev/tty5 $@
